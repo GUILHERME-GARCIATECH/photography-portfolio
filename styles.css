@@ -68,7 +68,8 @@ button { color: inherit; font: inherit; }
 }
 .wordmark span, .footer-logo span { font-weight: 500; letter-spacing: -.06em; font-size: 1.1rem; }
 .wordmark small, .footer-logo small { letter-spacing: .28em; font-size: .58rem; }
-.site-nav { display: flex; align-items: center; gap: clamp(1.5rem, 3vw, 3.5rem); }
+.site-nav { position: fixed; z-index: 100; top: 1.3rem; right: var(--pad); height: 1.3rem; display: flex; align-items: center; gap: clamp(1.5rem, 3vw, 3.5rem); mix-blend-mode: difference; transition: transform .5s ease; }
+.site-header.is-hidden + .site-nav { transform: translateY(-5rem); }
 .site-nav a { position: relative; font-size: .75rem; text-transform: uppercase; letter-spacing: .16em; }
 .site-nav a::after, .footer a::after {
   content: "";
@@ -160,10 +161,11 @@ button { color: inherit; font: inherit; }
   font: 400 clamp(6.5rem, 18vw, 19rem)/.72 var(--serif);
   letter-spacing: -.075em;
   white-space: nowrap;
-  mix-blend-mode: difference;
+  color: #fff;
   opacity: 0;
   animation: titleIn 1.4s .55s cubic-bezier(.22,1,.36,1) forwards;
 }
+.hero-title__asa--overlay { color: #000; clip-path: inset(100%); }
 .hero-title__studio {
   position: absolute;
   z-index: 4;
@@ -244,11 +246,16 @@ button { color: inherit; font: inherit; }
 }
 .works-photo img { width: 100%; height: auto; }
 .works-photo:focus-visible { outline: 1px solid var(--paper); outline-offset: 7px; }
+.works-next { display: none; }
+body.menu-open .works-next { display: none; }
 @media (max-width: 620px) {
   .works-heading h2 { max-width: 18rem; font-size: 2rem; }
   .works-edit { gap: 3.5rem; }
   .works-spread { display: grid; gap: 1.5rem; }
   .works-photo { width: 100%; }
+  .works-next:not([hidden]) { position: fixed; z-index: 90; right: max(var(--pad), env(safe-area-inset-right)); bottom: calc(1rem + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: .75rem; min-height: 44px; padding: .65rem 1rem; border: 1px solid var(--line); border-radius: 2rem; background: rgba(8,8,8,.94); color: var(--paper); font-size: .75rem; }
+  .works-next:focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
+  body.menu-open .works-next { display: none; }
 }
 
 .about { position: relative; z-index: 2; padding-top: clamp(4rem, 6vw, 6rem); padding-bottom: clamp(4rem, 6vw, 6rem); background: var(--ink); }
@@ -299,8 +306,8 @@ button { color: inherit; font: inherit; }
   .menu-toggle i::after { transform: translateY(5px); }
   .menu-toggle[aria-expanded="true"] i { transform: rotate(45deg); }
   .menu-toggle[aria-expanded="true"] i::after { transform: rotate(-90deg); }
-  .site-nav { position: fixed; inset: 0; flex-direction: column; justify-content: center; background: rgba(8,8,8,.98); transform: translateY(-100%); transition: transform .7s cubic-bezier(.77,0,.18,1); }
-  .site-nav.is-open { transform: translateY(0); }
+  .site-nav, .site-header.is-hidden + .site-nav { z-index: 99; inset: 0; height: 100dvh; flex-direction: column; justify-content: center; background: rgba(8,8,8,.98); mix-blend-mode: normal; transform: translateY(-100%); visibility: hidden; pointer-events: none; transition: transform .7s cubic-bezier(.77,0,.18,1), visibility .7s; }
+  .site-nav.is-open { transform: translateY(0); visibility: visible; pointer-events: auto; }
   .site-nav a { font: 400 clamp(3.5rem, 12vw, 6rem)/1 var(--serif); letter-spacing: -.03em; text-transform: none; }
   .hero-frame--main { left: 21%; width: 60vw; }
   .hero-frame--left { left: 4%; width: 23vw; height: 31%; }
@@ -317,8 +324,8 @@ button { color: inherit; font: inherit; }
   .hero { min-height: 52rem; }
   .hero-index { display: none; }
   .hero-frame--main { left: 14%; top: 9%; width: 72vw; height: 72%; }
-  .hero-frame--left { left: -5%; bottom: 7%; width: 31vw; height: 27%; }
-  .hero-frame--right { right: -6%; top: 16%; width: 32vw; height: 37%; }
+  .hero-frame--left { left: 3%; bottom: 7%; width: 31vw; height: 27%; }
+  .hero-frame--right { right: calc(-6% + 8px); top: 16%; width: 32vw; height: 37%; }
   .hero-title__asa { left: 2%; top: 35%; font-size: 24vw; }
   .hero-title__studio { left: 42%; top: 65%; font-size: 18vw; }
   .hero-note { right: var(--pad); bottom: 2rem; }
