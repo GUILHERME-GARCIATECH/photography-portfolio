@@ -1,173 +1,212 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080808" />
-    <meta
-      name="description"
-      content="Portfólio de Arthur, fotógrafo e editor da A.S.A Studio. Retratos, ensaios e fotografia esportiva."
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23080808'/%3E%3Cpath d='M10 49 24 14h8l-4 18h8l-10 17h-5l3-12h-8l-5 12Zm31 0 9-35h7l-3 35h-6l1-11h-6l-3 11Z' fill='%23f1eee7'/%3E%3C/svg%3E"
-    />
-    <title>A.S.A Studio — Fotografia autoral</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="grain" aria-hidden="true"></div>
 
-    <header class="site-header" data-header>
-      <a class="wordmark" href="#inicio" aria-label="A.S.A Studio — início">
-        <span>A.S.A</span><small>Studio</small>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span>Menu</span><i aria-hidden="true"></i>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
-        <a href="#trabalhos">Trabalhos</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080808" />
+  <meta name="description"
+    content="Portfólio de Arthur, fotógrafo e editor da A.S.A Studio. Retratos, ensaios e fotografia esportiva." />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23080808'/%3E%3Cpath d='M10 49 24 14h8l-4 18h8l-10 17h-5l3-12h-8l-5 12Zm31 0 9-35h7l-3 35h-6l1-11h-6l-3 11Z' fill='%23f1eee7'/%3E%3C/svg%3E" />
+  <title>A.S.A Studio — Fotografia autoral</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
 
-    <main>
-      <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-index" aria-hidden="true">PORTFÓLIO / 2026</div>
+<body>
+  <div class="grain" aria-hidden="true"></div>
 
-        <figure class="hero-frame hero-frame--left" data-parallax="-0.035">
-          <img src="assets/images/portfolio/portrait-child-monochrome-01.png" alt="Retrato em preto e branco de um menino olhando para a luz" />
-        </figure>
-        <figure class="hero-frame hero-frame--main" data-parallax="0.025">
-          <img src="assets/images/portfolio/portrait-laira-03.jpg" alt="Retrato de uma mulher com vestido lilás junto a uma árvore" />
-        </figure>
-        <figure class="hero-frame hero-frame--right" data-parallax="-0.018">
-          <img src="assets/images/portfolio/equestrian-portrait-01.png" alt="Mulher de chapéu montada em um cavalo preto" />
-        </figure>
+  <header class="site-header" data-header>
+    <a class="wordmark" href="#inicio" aria-label="A.S.A Studio — início">
+      <span>A.S.A</span><small>Studio</small>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span>Menu</span><i aria-hidden="true"></i>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-        <h1 id="hero-title" class="hero-title" aria-label="A.S.A Studio">
-          <span class="hero-title__asa">A.S.A</span>
-          <span class="hero-title__studio">Studio</span>
-        </h1>
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-index" aria-hidden="true">PORTFÓLIO / 2026</div>
 
-        <div class="hero-note">
-          <span>Fotografia por</span>
-          <strong>Arthur</strong>
-        </div>
-        <a class="scroll-cue" href="#trabalhos">
-          <span>Descobrir</span>
-          <i aria-hidden="true"></i>
-        </a>
-      </section>
+      <figure class="hero-frame hero-frame--left" data-parallax="-0.035">
+        <img src="assets/images/portfolio/portrait-child-monochrome-01.png"
+          alt="Retrato em preto e branco de um menino olhando para a luz" />
+      </figure>
+      <figure class="hero-frame hero-frame--main" data-parallax="0.025">
+        <img src="assets/images/portfolio/portrait-laira-03.jpg"
+          alt="Retrato de uma mulher com vestido lilás junto a uma árvore" />
+      </figure>
+      <figure class="hero-frame hero-frame--right" data-parallax="-0.018">
+        <img src="assets/images/portfolio/equestrian-portrait-01.png"
+          alt="Mulher de chapéu montada em um cavalo preto" />
+      </figure>
 
-      <section class="works section-pad" id="trabalhos" aria-labelledby="works-title">
-        <div class="works-heading reveal">
-          <h2 id="works-title">Alguns dos meus trabalhos</h2>
-        </div>
-        <div class="works-edit" aria-label="Seleção de fotografias do portfólio">
-          <div class="works-spread works-spread--pair reveal">
-            <button class="works-photo" style="--photo-ratio: 585 / 795; --photo-weight: 0.735849" type="button" data-lightbox="assets/images/portfolio/wedding-couple-02.png" aria-label="Ampliar: Noivos durante a cerimônia de casamento sob luzes violetas">
-              <img src="assets/images/portfolio/wedding-couple-02.png" alt="Noivos durante a cerimônia de casamento sob luzes violetas" width="585" height="795" loading="lazy" decoding="async" />
-            </button>
-            <button class="works-photo" style="--photo-ratio: 549 / 800; --photo-weight: 0.686250" type="button" data-lightbox="assets/images/portfolio/equestrian-portrait-02.png" aria-label="Ampliar: Mulher abraçando um cavalo ao ar livre na luz do fim da tarde">
-              <img src="assets/images/portfolio/equestrian-portrait-02.png" alt="Mulher abraçando um cavalo ao ar livre na luz do fim da tarde" width="549" height="800" loading="lazy" decoding="async" />
-            </button>
-          </div>
+      <h1 id="hero-title" class="hero-title" aria-label="A.S.A Studio">
+        <span class="hero-title__asa">A.S.A</span>
+        <span class="hero-title__studio">Studio</span>
+      </h1>
 
-          <div class="works-spread works-spread--trio reveal">
-            <button class="works-photo" style="--photo-ratio: 786 / 791; --photo-weight: 0.993679" type="button" data-lightbox="assets/images/portfolio/pre-wedding-couple-02.png" aria-label="Ampliar: Casal em ensaio pré-wedding entre girassóis">
-              <img src="assets/images/portfolio/pre-wedding-couple-02.png" alt="Casal em ensaio pré-wedding entre girassóis" width="786" height="791" loading="lazy" decoding="async" />
-            </button>
-            <button class="works-photo" style="--photo-ratio: 661 / 797; --photo-weight: 0.829360" type="button" data-lightbox="assets/images/portfolio/portrait-child-monochrome-02.png" aria-label="Ampliar: Retrato em preto e branco de um menino com óculos escuros apontando para a câmera">
-              <img src="assets/images/portfolio/portrait-child-monochrome-02.png" alt="Retrato em preto e branco de um menino com óculos escuros apontando para a câmera" width="661" height="797" loading="lazy" decoding="async" />
-            </button>
-            <button class="works-photo" style="--photo-ratio: 810 / 729; --photo-weight: 1.111111" type="button" data-lightbox="assets/images/portfolio/birthday-child-family-02.png" aria-label="Ampliar: Criança sorrindo nos braços do avô durante uma celebração">
-              <img src="assets/images/portfolio/birthday-child-family-02.png" alt="Criança sorrindo nos braços do avô durante uma celebração" width="810" height="729" loading="lazy" decoding="async" />
-            </button>
-          </div>
-
-          <div class="works-spread works-spread--pair reveal">
-            <button class="works-photo" style="--photo-ratio: 687 / 758; --photo-weight: 0.906332" type="button" data-lightbox="assets/images/portfolio/sports-football-01.png" aria-label="Ampliar: Jogador de futebol conduzindo a bola em campo">
-              <img src="assets/images/portfolio/sports-football-01.png" alt="Jogador de futebol conduzindo a bola em campo" width="687" height="758" loading="lazy" decoding="async" />
-            </button>
-            <button class="works-photo" style="--photo-ratio: 785 / 717; --photo-weight: 1.094840" type="button" data-lightbox="assets/images/portfolio/portrait-bhianca-01.png" aria-label="Ampliar: Retrato de uma mulher sorrindo ao ar livre sob a luz do sol">
-              <img src="assets/images/portfolio/portrait-bhianca-01.png" alt="Retrato de uma mulher sorrindo ao ar livre sob a luz do sol" width="785" height="717" loading="lazy" decoding="async" />
-            </button>
-          </div>
-
-          <div class="works-spread works-spread--trio reveal">
-            <button class="works-photo" style="--photo-ratio: 1066 / 1600; --photo-weight: 0.666250" type="button" data-lightbox="assets/images/portfolio/portrait-laira-02.jpg" aria-label="Ampliar: Detalhe das mãos e de um livro durante um ensaio ao ar livre">
-              <img src="assets/images/portfolio/portrait-laira-02.jpg" alt="Detalhe das mãos e de um livro durante um ensaio ao ar livre" width="1066" height="1600" loading="lazy" decoding="async" />
-            </button>
-            <button class="works-photo" style="--photo-ratio: 631 / 796; --photo-weight: 0.792714" type="button" data-lightbox="assets/images/portfolio/sports-volleyball-01.png" aria-label="Ampliar: Atleta de vôlei durante uma partida">
-              <img src="assets/images/portfolio/sports-volleyball-01.png" alt="Atleta de vôlei durante uma partida" width="631" height="796" loading="lazy" decoding="async" />
-            </button>
-            <button class="works-photo" style="--photo-ratio: 571 / 794; --photo-weight: 0.719144" type="button" data-lightbox="assets/images/portfolio/equestrian-portrait-03.png" aria-label="Ampliar: Mulher ao lado de um cavalo preto na luz do fim da tarde">
-              <img src="assets/images/portfolio/equestrian-portrait-03.png" alt="Mulher ao lado de um cavalo preto na luz do fim da tarde" width="571" height="794" loading="lazy" decoding="async" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="about section-pad" id="sobre" aria-labelledby="about-title">
-        <div class="eyebrow reveal"><span>02</span> Por trás da câmera</div>
-        <div class="about-grid">
-          <figure class="about-portrait reveal">
-            <img src="assets/images/profile/arthur-photographer-at-work.jpg" alt="Arthur fotografando durante um evento" loading="lazy" />
-          </figure>
-          <div class="about-copy">
-            <p class="about-intro reveal">Fotógrafo & editor</p>
-            <h2 id="about-title" class="reveal">Arthur,<br />A.S.A Studio.</h2>
-            <p class="reveal">
-              Meu trabalho nasce da observação. Procuro a imagem que acontece entre poses: um olhar, um movimento, a luz mudando de direção. É ali que cada história se torna única.
-            </p>
-            <div class="about-services reveal">
-              <span>Retratos</span>
-              <span>Ensaios</span>
-              <span>Esporte</span>
-              <span>Edição</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact" id="contato" aria-labelledby="contact-title">
-        <div class="contact-image" aria-hidden="true">
-          <img src="assets/images/portfolio/portrait-laira-01.jpg" alt="" loading="lazy" />
-        </div>
-        <div class="contact-content section-pad">
-          <div class="eyebrow reveal"><span>03</span> Contato</div>
-          <p class="contact-pretitle reveal">Uma boa fotografia começa com conversa.</p>
-          <h2 id="contact-title" class="reveal">Vamos criar<br /><em>algo que fique.</em></h2>
-          <div class="contact-links reveal">
-            <a href="https://www.instagram.com/asa.studioo01/" target="_blank" rel="noreferrer">
-              <span>Instagram</span><strong>@asa.studioo01</strong>
-            </a>
-            <a href="https://wa.me/5566984531095" target="_blank" rel="noreferrer">
-              <span>WhatsApp</span><strong>66 98453–1095</strong>
-            </a>
-            <a href="https://www.instagram.com/arthur.ftesporte/" target="_blank" rel="noreferrer">
-              <span>Esportes</span><strong>@arthur.ftesporte</strong>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer section-pad">
-      <div class="footer-logo" aria-label="A.S.A Studio">
-        <span>A.S.A</span><small>Studio</small>
+      <div class="hero-note">
+        <span>Fotografia por</span>
+        <strong>Arthur</strong>
       </div>
-      <p>Fotografia autoral · Brasil</p>
-      <a href="#inicio">Voltar ao início</a>
-    </footer>
+      <a class="scroll-cue" href="#trabalhos">
+        <span>Descobrir</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
 
-    <dialog class="lightbox" data-lightbox-dialog aria-label="Visualização ampliada da fotografia">
-      <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
-      <img src="" alt="Fotografia ampliada" />
-    </dialog>
-  </body>
+    <section class="works section-pad" id="trabalhos" aria-labelledby="works-title">
+      <div class="works-heading reveal">
+        <h2 id="works-title">Alguns dos meus trabalhos</h2>
+      </div>
+      <div class="works-edit" aria-label="Seleção de fotografias do portfólio">
+        <div class="works-spread works-spread--pair reveal">
+          <button class="works-photo" style="--photo-ratio: 585 / 795; --photo-weight: 0.735849" type="button"
+            data-lightbox="assets/images/portfolio/wedding-couple-02.png"
+            aria-label="Ampliar: Noivos durante a cerimônia de casamento sob luzes violetas">
+            <img src="assets/images/portfolio/wedding-couple-02.png"
+              alt="Noivos durante a cerimônia de casamento sob luzes violetas" width="585" height="795" loading="lazy"
+              decoding="async" />
+          </button>
+          <button class="works-photo" style="--photo-ratio: 549 / 800; --photo-weight: 0.686250" type="button"
+            data-lightbox="assets/images/portfolio/equestrian-portrait-02.png"
+            aria-label="Ampliar: Mulher abraçando um cavalo ao ar livre na luz do fim da tarde">
+            <img src="assets/images/portfolio/equestrian-portrait-02.png"
+              alt="Mulher abraçando um cavalo ao ar livre na luz do fim da tarde" width="549" height="800"
+              loading="lazy" decoding="async" />
+          </button>
+        </div>
+
+        <div class="works-spread works-spread--trio reveal">
+          <button class="works-photo" style="--photo-ratio: 786 / 791; --photo-weight: 0.993679" type="button"
+            data-lightbox="assets/images/portfolio/pre-wedding-couple-02.png"
+            aria-label="Ampliar: Casal em ensaio pré-wedding entre girassóis">
+            <img src="assets/images/portfolio/pre-wedding-couple-02.png"
+              alt="Casal em ensaio pré-wedding entre girassóis" width="786" height="791" loading="lazy"
+              decoding="async" />
+          </button>
+          <button class="works-photo" style="--photo-ratio: 661 / 797; --photo-weight: 0.829360" type="button"
+            data-lightbox="assets/images/portfolio/portrait-child-monochrome-02.png"
+            aria-label="Ampliar: Retrato em preto e branco de um menino com óculos escuros apontando para a câmera">
+            <img src="assets/images/portfolio/portrait-child-monochrome-02.png"
+              alt="Retrato em preto e branco de um menino com óculos escuros apontando para a câmera" width="661"
+              height="797" loading="lazy" decoding="async" />
+          </button>
+          <button class="works-photo" style="--photo-ratio: 810 / 729; --photo-weight: 1.111111" type="button"
+            data-lightbox="assets/images/portfolio/birthday-child-family-02.png"
+            aria-label="Ampliar: Criança sorrindo nos braços do avô durante uma celebração">
+            <img src="assets/images/portfolio/birthday-child-family-02.png"
+              alt="Criança sorrindo nos braços do avô durante uma celebração" width="810" height="729" loading="lazy"
+              decoding="async" />
+          </button>
+        </div>
+
+        <div class="works-spread works-spread--pair reveal">
+          <button class="works-photo" style="--photo-ratio: 687 / 758; --photo-weight: 0.906332" type="button"
+            data-lightbox="assets/images/portfolio/sports-football-01.png"
+            aria-label="Ampliar: Jogador de futebol conduzindo a bola em campo">
+            <img src="assets/images/portfolio/sports-football-01.png"
+              alt="Jogador de futebol conduzindo a bola em campo" width="687" height="758" loading="lazy"
+              decoding="async" />
+          </button>
+          <button class="works-photo" style="--photo-ratio: 785 / 717; --photo-weight: 1.094840" type="button"
+            data-lightbox="assets/images/portfolio/portrait-bhianca-01.png"
+            aria-label="Ampliar: Retrato de uma mulher sorrindo ao ar livre sob a luz do sol">
+            <img src="assets/images/portfolio/portrait-bhianca-01.png"
+              alt="Retrato de uma mulher sorrindo ao ar livre sob a luz do sol" width="785" height="717" loading="lazy"
+              decoding="async" />
+          </button>
+        </div>
+
+        <div class="works-spread works-spread--trio reveal">
+          <button class="works-photo" style="--photo-ratio: 1066 / 1600; --photo-weight: 0.666250" type="button"
+            data-lightbox="assets/images/portfolio/portrait-laira-02.jpg"
+            aria-label="Ampliar: Detalhe das mãos e de um livro durante um ensaio ao ar livre">
+            <img src="assets/images/portfolio/portrait-laira-02.jpg"
+              alt="Detalhe das mãos e de um livro durante um ensaio ao ar livre" width="1066" height="1600"
+              loading="lazy" decoding="async" />
+          </button>
+          <button class="works-photo" style="--photo-ratio: 631 / 796; --photo-weight: 0.792714" type="button"
+            data-lightbox="assets/images/portfolio/sports-volleyball-01.png"
+            aria-label="Ampliar: Atleta de vôlei durante uma partida">
+            <img src="assets/images/portfolio/sports-volleyball-01.png" alt="Atleta de vôlei durante uma partida"
+              width="631" height="796" loading="lazy" decoding="async" />
+          </button>
+          <button class="works-photo" style="--photo-ratio: 571 / 794; --photo-weight: 0.719144" type="button"
+            data-lightbox="assets/images/portfolio/equestrian-portrait-03.png"
+            aria-label="Ampliar: Mulher ao lado de um cavalo preto na luz do fim da tarde">
+            <img src="assets/images/portfolio/equestrian-portrait-03.png"
+              alt="Mulher ao lado de um cavalo preto na luz do fim da tarde" width="571" height="794" loading="lazy"
+              decoding="async" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="sobre" aria-labelledby="about-title">
+      <div class="eyebrow reveal"><span>02</span> Por trás da câmera</div>
+      <div class="about-grid">
+        <figure class="about-portrait reveal">
+          <img src="assets/images/profile/arthur-photographer-at-work.jpg" alt="Arthur fotografando durante um evento"
+            loading="lazy" />
+        </figure>
+        <div class="about-copy">
+          <p class="about-intro reveal">Fotógrafo & editor</p>
+          <h2 id="about-title" class="reveal">Arthur,<br />A.S.A Studio.</h2>
+          <p class="reveal"></p>
+          <div class="about-services reveal">
+            <span>Retratos</span>
+            <span>Ensaios</span>
+            <span>Esporte</span>
+            <span>Edição</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="contact-image" aria-hidden="true">
+        <img src="assets/images/portfolio/portrait-laira-01.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="contact-content section-pad">
+        <div class="eyebrow reveal"><span>03</span> Contato</div>
+        <p class="contact-pretitle reveal">Uma boa fotografia começa com conversa.</p>
+        <h2 id="contact-title" class="reveal">Vamos criar<br /><em>algo que fique.</em></h2>
+        <div class="contact-links reveal">
+          <a href="https://www.instagram.com/asa.studio01/" target="_blank" rel="noreferrer">
+            <span>Instagram</span><strong>@asa.studio01</strong>
+          </a>
+          <a href="https://wa.me/5566984531095" target="_blank" rel="noreferrer">
+            <span>WhatsApp</span><strong>66 98453–1095</strong>
+          </a>
+          <a href="https://www.instagram.com/arthur.ftesporte/" target="_blank" rel="noreferrer">
+            <span>Esportes</span><strong>@arthur.ftesporte</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-pad">
+    <div class="footer-logo" aria-label="A.S.A Studio">
+      <span>A.S.A</span><small>Studio</small>
+    </div>
+    <p>Fotografia autoral · Brasil</p>
+    <a href="#inicio">Voltar ao início</a>
+  </footer>
+
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Visualização ampliada da fotografia">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="Fotografia ampliada" />
+  </dialog>
+</body>
+
 </html>
