@@ -58,10 +58,12 @@ function updateTitleClipping() {
   const titleBounds = asaTitle.getBoundingClientRect();
   heroFrames.forEach((frame, index) => {
     const bounds = frame.getBoundingClientRect();
-    const top = Math.max(0, bounds.top - titleBounds.top);
-    const right = Math.max(0, titleBounds.right - bounds.right);
-    const bottom = Math.max(0, titleBounds.bottom - bounds.bottom);
-    const left = Math.max(0, bounds.left - titleBounds.left);
+    // Negative insets preserve glyphs that extend beyond the tight line box
+    // (the .72 line-height and negative letter-spacing), up to the photo edges.
+    const top = bounds.top - titleBounds.top;
+    const right = titleBounds.right - bounds.right;
+    const bottom = titleBounds.bottom - bounds.bottom;
+    const left = bounds.left - titleBounds.left;
     asaOverlays[index].style.clipPath = `inset(${top}px ${right}px ${bottom}px ${left}px)`;
   });
 }
@@ -71,9 +73,12 @@ const secondPhoto = document.querySelectorAll(".works-photo")[1];
 const about = document.querySelector("#sobre");
 
 function updateNextLink() {
-  nextLink.hidden = !mobileGallery.matches ||
-    secondPhoto.getBoundingClientRect().top > window.innerHeight * .6 ||
-    about.getBoundingClientRect().top <= window.innerHeight || lightbox.open;
+  const visible = mobileGallery.matches &&
+    secondPhoto.getBoundingClientRect().top <= window.innerHeight * .6 &&
+    about.getBoundingClientRect().top > window.innerHeight && !lightbox.open;
+  nextLink.classList.toggle("is-visible", visible);
+  nextLink.inert = !visible;
+  nextLink.setAttribute("aria-hidden", String(!visible));
 }
 
 nextLink.addEventListener("click", () => {
