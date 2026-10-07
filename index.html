@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080808" />
+    <meta
+      name="description"
+      content="Portfólio de Arthur, fotógrafo e editor da A.S.A Studio. Retratos, ensaios e fotografia esportiva."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23080808'/%3E%3Cpath d='M10 49 24 14h8l-4 18h8l-10 17h-5l3-12h-8l-5 12Zm31 0 9-35h7l-3 35h-6l1-11h-6l-3 11Z' fill='%23f1eee7'/%3E%3C/svg%3E"
+    />
+    <title>A.S.A Studio — Fotografia autoral</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="wordmark" href="#inicio" aria-label="A.S.A Studio — início">
+        <span>A.S.A</span><small>Studio</small>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span><i aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-index" aria-hidden="true">PORTFÓLIO / 2026</div>
+
+        <figure class="hero-frame hero-frame--left" data-parallax="-0.035">
+          <img src="assets/images/portfolio/portrait-child-monochrome-01.png" alt="Retrato em preto e branco de um menino olhando para a luz" />
+        </figure>
+        <figure class="hero-frame hero-frame--main" data-parallax="0.025">
+          <img src="assets/images/portfolio/portrait-laira-03.jpg" alt="Retrato de uma mulher com vestido lilás junto a uma árvore" />
+        </figure>
+        <figure class="hero-frame hero-frame--right" data-parallax="-0.018">
+          <img src="assets/images/portfolio/equestrian-portrait-01.png" alt="Mulher de chapéu montada em um cavalo preto" />
+        </figure>
+
+        <h1 id="hero-title" class="hero-title" aria-label="A.S.A Studio">
+          <span class="hero-title__asa">A.S.A</span>
+          <span class="hero-title__studio">Studio</span>
+        </h1>
+
+        <div class="hero-note">
+          <span>Fotografia por</span>
+          <strong>Arthur</strong>
+        </div>
+        <a class="scroll-cue" href="#trabalhos">
+          <span>Descobrir</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="works" id="trabalhos" aria-labelledby="works-title">
+        <div class="section-head section-pad reveal">
+          <div class="eyebrow"><span>01</span> Seleção</div>
+          <h2 id="works-title">Alguns dos meus trabalhos</h2>
+          <p>O que eu fotografo</p>
+        </div>
+        <div class="works-editorial section-pad" aria-label="Seleção curada do portfólio">
+          <article class="editorial-spread editorial-spread--stories">
+            <div class="editorial-copy editorial-copy--stories reveal">
+              <span>Ensaios · Pre-wedding · Casamentos</span>
+              <h3>Pessoas</h3>
+            </div>
+            <button class="editorial-photo editorial-photo--prewedding reveal" type="button" data-lightbox="assets/images/portfolio/pre-wedding-couple-02.png" aria-label="Ampliar fotografia de pre-wedding">
+              <img src="assets/images/portfolio/pre-wedding-couple-02.png" alt="Casal em ensaio pre-wedding entre girassóis" loading="lazy" />
+            </button>
+            <button class="editorial-photo editorial-photo--rings reveal" type="button" data-lightbox="assets/images/portfolio/wedding-rings-01.png" aria-label="Ampliar detalhe de casamento">
+              <img src="assets/images/portfolio/wedding-rings-01.png" alt="Detalhe das alianças do casal" loading="lazy" />
+            </button>
+            <button class="editorial-photo editorial-photo--portrait reveal" type="button" data-lightbox="assets/images/portfolio/portrait-bhianca-01.png" aria-label="Ampliar fotografia de ensaio individual">
+              <img src="assets/images/portfolio/portrait-bhianca-01.png" alt="Retrato feminino ao ar livre" loading="lazy" />
+            </button>
+          </article>
+
+          <article class="editorial-spread editorial-spread--sport">
+            <div class="editorial-copy editorial-copy--sport reveal">
+              <span>Campo · Quadra · Equestre</span>
+              <h3>Esportes</h3>
+            </div>
+            <button class="editorial-photo editorial-photo--football reveal" type="button" data-lightbox="assets/images/portfolio/sports-football-01.png" aria-label="Ampliar fotografia de futebol">
+              <img src="assets/images/portfolio/sports-football-01.png" alt="Jogador de futebol conduzindo a bola" loading="lazy" />
+            </button>
+            <button class="editorial-photo editorial-photo--equestrian reveal" type="button" data-lightbox="assets/images/portfolio/equestrian-portrait-01.png" aria-label="Ampliar fotografia equestre">
+              <img src="assets/images/portfolio/equestrian-portrait-01.png" alt="Retrato de mulher montada em cavalo" loading="lazy" />
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="about section-pad" id="sobre" aria-labelledby="about-title">
+        <div class="eyebrow reveal"><span>02</span> Por trás da câmera</div>
+        <div class="about-grid">
+          <figure class="about-portrait reveal">
+            <img src="assets/images/profile/arthur-photographer-at-work.jpg" alt="Arthur fotografando durante um evento" loading="lazy" />
+          </figure>
+          <div class="about-copy">
+            <p class="about-intro reveal">Fotógrafo & editor</p>
+            <h2 id="about-title" class="reveal">Arthur,<br />A.S.A Studio.</h2>
+            <p class="reveal">
+              Meu trabalho nasce da observação. Procuro a imagem que acontece entre poses: um olhar, um movimento, a luz mudando de direção. É ali que cada história se torna única.
+            </p>
+            <div class="about-services reveal">
+              <span>Retratos</span>
+              <span>Ensaios</span>
+              <span>Esporte</span>
+              <span>Edição</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato" aria-labelledby="contact-title">
+        <div class="contact-image" aria-hidden="true">
+          <img src="assets/images/portfolio/portrait-laira-01.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="contact-content section-pad">
+          <div class="eyebrow reveal"><span>03</span> Contato</div>
+          <p class="contact-pretitle reveal">Uma boa fotografia começa com conversa.</p>
+          <h2 id="contact-title" class="reveal">Vamos criar<br /><em>algo que fique.</em></h2>
+          <div class="contact-links reveal">
+            <a href="https://www.instagram.com/asa.studioo01/" target="_blank" rel="noreferrer">
+              <span>Instagram</span><strong>@asa.studioo01</strong>
+            </a>
+            <a href="https://wa.me/5566984531095" target="_blank" rel="noreferrer">
+              <span>WhatsApp</span><strong>66 98453–1095</strong>
+            </a>
+            <a href="https://www.instagram.com/arthur.ftesporte/" target="_blank" rel="noreferrer">
+              <span>Esportes</span><strong>@arthur.ftesporte</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section-pad">
+      <div class="footer-logo" aria-label="A.S.A Studio">
+        <span>A.S.A</span><small>Studio</small>
+      </div>
+      <p>Fotografia autoral · Brasil</p>
+      <a href="#inicio">Voltar ao início</a>
+    </footer>
+
+    <dialog class="lightbox" data-lightbox-dialog aria-label="Visualização ampliada da fotografia">
+      <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+      <img src="" alt="Fotografia ampliada" />
+    </dialog>
+  </body>
+</html>
