@@ -212,27 +212,44 @@ button { color: inherit; font: inherit; }
 .section-head h2 { margin: 3.5rem 0 0; grid-column: 2; font: 400 clamp(3.3rem, 7vw, 7.5rem)/.92 var(--serif); letter-spacing: -.04em; }
 .section-head p { margin: 0 0 .5rem; justify-self: end; color: var(--smoke); font-size: .75rem; text-transform: uppercase; letter-spacing: .14em; }
 
-.works { position: relative; isolation: isolate; overflow: hidden; padding-top: clamp(4rem, 5vw, 5rem); padding-bottom: clamp(4rem, 6vw, 6rem); border-bottom: 1px solid var(--line); }
-.works-editorial { display: grid; gap: clamp(2rem, 4vw, 4rem); }
-.editorial-spread { position: relative; min-width: 0; }
-.editorial-spread--stories { height: min(57vh, 42rem); min-height: 29rem; }
-.editorial-spread--sport { height: min(61vh, 45rem); min-height: 31rem; }
-.editorial-copy { position: absolute; z-index: 4; }
-.editorial-copy span { display: block; color: var(--smoke); font-size: .68rem; text-transform: uppercase; letter-spacing: .16em; }
-.editorial-copy h3 { margin: .45rem 0 0; font: 400 clamp(4rem, 9vw, 9rem)/.82 var(--serif); letter-spacing: -.055em; }
-.editorial-copy--stories { left: 43%; top: 10%; }
-.editorial-copy--sport { left: 48%; top: 8%; }
-.editorial-copy--sport h3 { color: var(--accent); }
-.editorial-photo { position: absolute; z-index: 2; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
-.editorial-photo img { display: block; width: 100%; height: auto; transition: transform 1.2s cubic-bezier(.22,1,.36,1), filter .8s ease; }
-.editorial-photo::after { content: "+"; position: absolute; right: .7rem; bottom: .45rem; font: 300 1.35rem var(--sans); opacity: 0; transition: opacity .35s ease, transform .35s ease; }
-.editorial-photo:hover img { transform: scale(.985); filter: brightness(.82); }
-.editorial-photo:hover::after { opacity: 1; transform: rotate(90deg); }
-.editorial-photo--prewedding { left: 4%; top: 0; width: 32%; }
-.editorial-photo--rings { left: 44%; bottom: 0; width: 17%; z-index: 3; }
-.editorial-photo--portrait { right: 4%; top: 8%; width: 23%; }
-.editorial-photo--football { left: 10%; top: 0; width: 32%; }
-.editorial-photo--equestrian { right: 11%; top: 16%; width: 24%; }
+.works {
+  position: relative;
+  padding-top: clamp(4.5rem, 7vw, 7rem);
+  padding-bottom: clamp(5rem, 9vw, 9rem);
+  background: var(--ink);
+}
+.works-heading, .works-edit { width: min(100%, 70rem); margin-inline: auto; }
+.works-heading { margin-bottom: clamp(2.5rem, 4vw, 4rem); }
+.works-heading h2 {
+  margin: 0;
+  font: 400 clamp(1.9rem, 2.8vw, 2.65rem)/1.15 var(--serif);
+  letter-spacing: -.025em;
+}
+.works-edit { display: grid; gap: clamp(3.5rem, 7vw, 7rem); }
+.works-spread {
+  display: flex;
+  align-items: start;
+  gap: clamp(1rem, 2.2vw, 2rem);
+}
+.works-photo {
+  position: relative;
+  display: block;
+  flex: var(--photo-weight) 1 0%;
+  min-width: 0;
+  aspect-ratio: var(--photo-ratio);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+.works-photo img { width: 100%; height: auto; }
+.works-photo:focus-visible { outline: 1px solid var(--paper); outline-offset: 7px; }
+@media (max-width: 620px) {
+  .works-heading h2 { max-width: 18rem; font-size: 2rem; }
+  .works-edit { gap: 3.5rem; }
+  .works-spread { display: grid; gap: 1.5rem; }
+  .works-photo { width: 100%; }
+}
 
 .about { position: relative; z-index: 2; padding-top: clamp(4rem, 6vw, 6rem); padding-bottom: clamp(4rem, 6vw, 6rem); background: var(--ink); }
 .about-grid { display: grid; grid-template-columns: minmax(16rem, .9fr) 1.3fr; gap: clamp(3rem, 9vw, 9rem); align-items: end; margin-top: 3.5rem; }
@@ -293,8 +310,6 @@ button { color: inherit; font: inherit; }
   .section-head { grid-template-columns: 1fr 2fr; }
   .section-head h2 { grid-column: 1 / -1; }
   .section-head p { grid-column: 2; }
-  .editorial-spread--stories { height: min(53vh, 36rem); }
-  .editorial-spread--sport { height: min(57vh, 39rem); }
 }
 
 @media (max-width: 620px) {
@@ -311,19 +326,6 @@ button { color: inherit; font: inherit; }
   .section-head { display: block; padding-bottom: 4rem; }
   .section-head h2 { margin-top: 3rem; }
   .section-head p { margin-top: 1.5rem; }
-  .works { padding-top: 4.5rem; padding-bottom: 4.5rem; }
-  .works-editorial { gap: 2.5rem; padding-left: 1.25rem; padding-right: 1.25rem; }
-  .editorial-spread--stories { height: 31rem; min-height: 0; }
-  .editorial-spread--sport { height: 28rem; min-height: 0; }
-  .editorial-copy span { font-size: .62rem; }
-  .editorial-copy h3 { font-size: 17vw; }
-  .editorial-copy--stories { left: 0; top: auto; bottom: 0; }
-  .editorial-copy--sport { left: 0; top: auto; bottom: 0; }
-  .editorial-photo--prewedding { left: 0; top: 2.5rem; width: 62%; }
-  .editorial-photo--rings { left: auto; right: 0; bottom: 4.5rem; width: 29%; }
-  .editorial-photo--portrait { right: 0; top: 0; width: 36%; }
-  .editorial-photo--football { left: 0; top: 1rem; width: 61%; }
-  .editorial-photo--equestrian { right: 0; top: 5rem; width: 38%; }
   .about-grid { display: block; margin-top: 3rem; }
   .about-portrait { width: 84%; height: 120vw; }
   .about-copy { margin-top: 4rem; }
